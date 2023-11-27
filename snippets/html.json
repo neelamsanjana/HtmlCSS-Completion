@@ -1,196 +1,161 @@
-{
-	"Génère l'en-tête HTML de base": {
-		"prefix": "doctype",
-		"body": [
-			"<!DOCTYPE html>",
-			"<html lang=\"FR\">",
-			"<head>",
-			"\t<meta charset=\"UTF-8\">",
-			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
-			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
-			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
-			"\t<title>Ma page Web</title>",
-			"\t<link rel=\"stylesheet\" href=\"./style.css\">",
-			"</head>",
-			"<body>",
-			"\t$2",
-			"</body>",
-			"</html>"
-		],
-		"description": "Génère l'en-tête HTML de base"
-	},
-	"Insère un style CSS en ligne": {
-		"prefix": "style",
-		"body": [
-			"<style>",
-			"\t$1",
-			"</style>"
-		],
-		"description": "Insère un style CSS en ligne"
-	},
-	"Insère une balise de division (div)": {
-		"prefix": "div",
-		"body": [
-			"<div>",
-			"\t$1",
-			"</div>"
-		],
-		"description": "Insère une balise de division (div)"
-	},
-	"Ajoute une balise de paragraphe": {
-		"prefix": "p",
-		"body": [
-			"<p>$1</p>"
-		],
-		"description": "Ajoute une balise de paragraphe"
-	},
-	"Insère une balise de lien (a)": {
-		"prefix": "lien",
-		"body": [
-			"<a href=\"$1\">$2</a>"
-		],
-		"description": "Insère une balise de lien (a)"
-	},
-	"Insère un lien de renvoi pour une image": {
-		"prefix": "img",
-		"body": [
-			"<a href=\"$1\"><img src=\"$2\" alt=\"$3\"></a>"
-		]
-	},
-	"Crée une liste non ordonnée (ul)": {
-		"prefix": "ul",
-		"body": [
-			"<ul>",
-			"\t<li>$1</li>",
-			"</ul>"
-		],
-		"description": "Crée une liste non ordonnée (ul)"
-	},
-	"Crée une liste ordonnée (ol)": {
-		"prefix": "ol",
-		"body": [
-			"<ol>",
-			"\t<li>$1</li>",
-			"</ol>"
-		],
-		"description": "Crée une liste ordonnée (ol)"
-	},
-	"Ajoute un formulaire (form)": {
-		"prefix": "form",
-		"body": [
-			"<form action=\"$1\" method=\"$2\">",
-			"\t$3",
-			"\t<input type=\"text\" name=\"$1\" id=\"$2\">",
-			"\t<input type=\"password\" name=\"$1\" id=\"$2\">",
-			"\t<input type=\"checkbox\" name=\"$1\" id=\"$2\">",
-			"\t<input type=\"radio\" name=\"$1\" id=\"$2\">",
-			"\t<textarea name=\"$1\" id=\"$2\" rows=\"$3\" cols=\"$4\"></textarea>",
-			"\t<select name=\"$1\" id=\"$2\">",
-			"\t\t<option value=\"$3\">$4</option>",
-			"\t</select>",
-			"\t<input type=\"reset\" value=\"$4\">",
-			"\t<input type=\"submit\" value=\"$4\">",
-			"</form>"
-		],
-		"description": "Ajoute un formulaire (form)"
-	},
-	"Crée une grille CSS (flexbox)": {
-		"prefix": "part",
-		"body": [
-			"<div class=\"container\">",
-			"\t<div class=\"item\">$1</div>",
-			"\t<div class=\"item\">$2</div>",
-			"</div>"
-		],
-		"description": "Crée une grille CSS (flexbox)"
-	},
-	"Insère un commentaire HTML": {
-		"prefix": "com",
-		"body": ["<!-- $1 -->"],
-		"description": "Insère un commentaire HTML"
-	},
-	"En-tête (Header)": {
-		"prefix": "header",
-		"body": [
-			"<header>",
-			"\t$1",
-			"</header>"
-		],
-		"description": "Insère un en-tête (Header)"
-	},
-	"Navigation (Nav)": {
-		"prefix": "nav",
-		"body": [
-			"<nav>",
-			"\t$1",
-			"</nav>"
-		],
-		"description": "Insère une navigation (Nav)"
-	},
-	"Section (Section)": {
-		"prefix": "sec",
-		"body": [
-			"<section>",
-			"\t$1",
-			"</section>"
-		],
-		"description": "Insère une section (Section)"
-	},
-	"Pied de page générique": {
-		"prefix": "foot",
-		"body": [
-			"<footer>",
-			"\t<div class=\"contenu_Footer\">",
-			"\t\t<div class=\"footer_Section\">",
-			"\t\t\t<h3>$1</h3>",
-			"\t\t\t$2",
-			"\t\t</div>",
-			"\t\t<div class=\"footer_Section\">",
-			"\t\t\t<h3>$3</h3>",
-			"\t\t\t$4",
-			"\t\t</div>",
-			"\t</div>",
-			"</footer>"
-		],
-		"description": "Insère un pied de page générique"
-	},
-	"Insère le script jquery": {
-		"prefix": "jquery",
-		"body": [
-			"<script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>"
-		],
-		"description": "Insère le script jquery"
-	},
-	"Insère le css fontawesome": {
-		"prefix": "font",
-		"body": [
-			"<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\">"
-		],
-		"description": "Insère le script fontawesome"
-	},
-	"Documentation du langage": {
-		"prefix": "doc",
-		"body": [
-			"<!-- C’est un langage qui permet de composer des pages web. On parle de langage de balisage et non de langage de programmation,",
-			"car le but du HTML est d’encadrer les différents éléments présents dans une page (images, titres, paragraphes ...) par des balises",
-			"pour leur permettre d’être mis en forme secondairement (via une feuille de style) et pour leur donner du sens. -->"
-		],
-		"description": "Documentation du langage"
-	},
-	"Utilisation d'un tableau": {
-		"prefix": "tableau",
-		"body": [
-			"<table>",
-			"\t<tr>",
-			"\t\t<th>Entête 1</th>",
-			"\t\t<th>Entête 2</th>",
-			"\t</tr>",
-			"\t<tr>",
-			"\t\t<td>$1</td>",
-			"\t\t<td>$2</td>",
-			"\t</tr>",
-			"</table>"
-		],
-		"description": "Utilisation d'un tableau"
-	}
-}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="head-section">
+        <div class="card">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+                <div class="container-fluid">
+
+                    <ul class="navbar-nav mX-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#page1">SKILLS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#page2">PROJECTS</a>
+
+
+                        </li>
+
+
+
+                        <div class="nav-item">
+                            <a class="nav-link" href="#page3">CONTACTS</a>
+
+
+                            <div id="index.html">
+
+
+                                <img src="https://i.ibb.co/2yRBLcF/sanju-photo-1.jpg" class="img" />
+
+
+                                <div id="text2">
+                                    <h2>Hello !</h2>
+                                    <h1>I'm Neelam Sanjana</h1>
+
+                                    <h4>
+                                        A passocinate Web Developer with a keen eye for design and a flair for creating seamless,
+                                        user-friendly digital experiences.With a strong foundation in Front-end and Back-end technologies,
+                                        I specialize in turning ideas into beautifully crafted Websites and Web Applications.</h4>
+                                    <div id="buttons">
+                                        <button id="b2">
+                                            <a href="  ">Resume</a>
+
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <div class="container">
+                                    <div id="page1" class="text2">
+                                        <h1 class="head">My Skills</h1>
+                                        <p>As a dedicated web developer, i've honed a versatile skill
+                                            set that empowers too bring creative vitions to life in the digital realm.
+                                            My proficiency spans both front-end and back-end technologies, including
+                                            HTML, CSS, JavaScript, and a variety of popular frameworks and libraries.</p>
+
+
+
+                                        <h1 claas="boxcls">Competative Programming</h1>
+                                        <p>
+                                            I regularly do Competative coding since i love proble slving.
+                                            I have 4.5 star at NXTWAVEand 5star at HackerRank.
+                                        </p>
+
+                                        <h1>Design and Development</h1>
+                                        <p>I have developed many websites and projects Over time i have gained
+                                            a wealth of experience designing and developed web application.</p>
+
+                                        <h1>Machine Learning</h1>
+                                        <p>I'm Machine Learing Enthusaiast.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div id="page2">
+                                <div class="text3">
+                                    <h1>Projects</h1>
+
+                                    <div id="projects p1">
+                                        <div class="text3">
+                                            <h1>Calculator</h1>
+                                        </div>
+                                        <div id="image">
+                                            <a href="">
+                                                <img src="https://i.ibb.co/0Y6NPwX/calculator.jpg" alt="Description of the project" width="180px" height="180px" border="0"></a>
+                                        </div>
+                                    </div>
+                                    <div class="projects p2">
+                                        <div id="text3">
+                                            <h1>TO-DO List Webbsite</h1>
+                                        </div>
+                                        <div id="image">
+                                            <a href=" ">
+                                                <img src="https://i.ibb.co/L8D3hHR/todo.jpg" alt="Description of the project" border="0">
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <div class="projects p3">
+                                        <div id="text3">
+                                            <h1>Newsletter Website</h1>
+
+                                        </div>
+                                        <div id="image">
+                                            <a href="https://i.ibb.co/HGknwtz/newspaper-icon.png">
+                                                <img src="https://i.ibb.co/HGknwtz/newspaper-icon.png" alt="Deescription of the project" width="180px" height="180px" border="0"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="end">
+                            <div id="page3" class="contact-me">
+                                <br /> <br />
+                                <h2>Get In Touch</h2>
+
+                                <br />
+                                <h2 class="collab">Lets Collab and do a project</h2>
+                                <br />
+                                <p>Contact me</p>
+                                <br />
+                                <a class="btn" href="https://i.ibb.co/LnGqV0G/gmail-icon.png">
+                                    <img src="https://i.ibb.co/LnGqV0G/gmail-icon.png" width="38px" height="38px" alt="gmail-icon" border="0"></a>
+                                <a class="btn" href="https://i.ibb.co/HGDpL5f/linkedin-icon.png">
+                                    <img src="https://i.ibb.co/HGDpL5f/linkedin-icon.png " width="40px" height="40px" alt="linkedin-icon" border="0"> </a>
+
+                                <a class="btn" href="https://i.ibb.co/m8sMg10/twitter-icon.png">
+                                    <img src="https://i.ibb.co/m8sMg10/twitter-icon.png" width="40px" height="40px" alt="twitter-icon" border="0"></a>
+                                <a class="btn" href="https://i.ibb.co/10n5WX1/icons.png">
+                                    <img src="https://i.ibb.co/10n5WX1/icons.png" width="40px" height="40px" alt="icons" border="0"></a>
+                                <a class="btn" href=" https://instagram.com/neelam_sanju_?igshid=NzZlODBkYWE4Ng==">
+                                    <img src="https://i.ibb.co/dLXyyz5/insta-icon.jpg" width="40px" height="40px" alt="insta-icons" border="0"></a>
+
+                                <p class="Copyright"> 2023 Portfolio</p>
+                                <div class="bottom-container">
+                                    <div style="width:50% ; margin-left: auto; margin-right: auto">
+
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html
